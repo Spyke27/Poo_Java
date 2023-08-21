@@ -4,12 +4,18 @@ import java.util.Objects;
 
 public class Client {
 
+	private Integer id;
 	private String name;
 	private String email;
 	
-	public Client(String name, String email) {
+	public Client(Integer id, String name, String email) {
+		this.id = id;
 		this.name = name;
 		this.email = email;
+	}
+
+	public Integer getId() {
+		return id;
 	}
 
 	public String getName() {
@@ -36,6 +42,5 @@ public class Client {
 		Client other = (Client) obj;
 		return Objects.equals(email, other.email) && Objects.equals(name, other.name);
 	}
-	
 	
 }
