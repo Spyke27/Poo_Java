@@ -15,9 +15,9 @@ public class Program {
 		Random random = new Random();        
         int orderId = random.nextInt(100); 
         
-        Client anna = new Client(1, "Anna", "anna@gmail.com");
-        Client bob = new Client(2, "Bob", "bob@gmail.com");
-        Client chris = new Client(3, "Chris", "chris@gmail.com");
+        Client anna = new Client(1, "Anna Richester", "anna@gmail.com");
+        Client bob = new Client(2, "Bob Brown", "bob@gmail.com");
+        Client chris = new Client(3, "Chris Molthes", "chris@gmail.com");
         
         Product tv = new Product("TV Samsung", 1876.99, 5);
         Product notebook = new Product("Acer Nitro", 5800.50, 3);
@@ -33,7 +33,8 @@ public class Program {
         compra1.addProduct(tv);
         compra1.addProduct(notebook);
         
-        System.out.println(compra1.getProducts());
+        System.out.println(compra1);
+        compra1.listProducts();
 	}
 
 }
