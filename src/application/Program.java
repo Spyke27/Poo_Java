@@ -32,6 +32,8 @@ public class Program {
         compra1.addProduct(iphone);
         compra1.addProduct(tv);
         compra1.addProduct(notebook);
+        compra1.addProduct(mouse);
+
         
         System.out.println(compra1);
         compra1.listProducts();

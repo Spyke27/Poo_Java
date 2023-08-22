@@ -27,6 +27,11 @@ public class Client {
 	}
 
 	@Override
+	public String toString() {
+		return "Name: " + name + "\nemail: " + email;
+	}
+
+	@Override
 	public int hashCode() {
 		return Objects.hash(email, name);
 	}

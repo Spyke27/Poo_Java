@@ -29,8 +29,12 @@ public class Compra {
 	}
 	
 	public void addProduct(Product product) {
-		products.add(product);
-		product.setQuantity(product.getQuantity()-1);
+		if(product.getQuantity() >= 1) {
+			products.add(product);
+			product.setQuantity(product.getQuantity()-1);
+		} else {
+			System.out.println(product.getName() + " Unavailable!");
+		}
 	}
 	
 	public Double totalOrder() { 
@@ -41,13 +45,18 @@ public class Compra {
 		return value;
 	}
 	
+	
 	public void listProducts() {
 		System.out.println("----------------------------------");
-		System.out.println("Products:");
-		for(Product product: products) {
-			System.out.println(product.getName() + ": R$" + product.getPrice());
+		if(!products.isEmpty()) {
+			System.out.println("Products:");
+			for(Product product: products) {
+				System.out.println(product.getName() + ": R$" + product.getPrice());
+			}
+		} else {
+			System.out.println("No products added!");
 		}
-		System.out.println("\nTotal order: " + totalOrder());
+		System.out.printf("\nTotal order: R$%.2f", totalOrder());
 	}
 
 	@Override
