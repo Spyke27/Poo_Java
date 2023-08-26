@@ -63,6 +63,4 @@ public class Compra {
 	public String toString() {
 		return "Order: " + order + "\nClient: " + client.getName();
 	}
-	
-	
 }
